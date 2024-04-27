@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Identification</title>
+</head>
+<body>
+    <h1>Exoplanet Identification</h1>
+    <form action="/predict" method="post">
+        {% for column in column_names %}
+        <label for="{{ column }}">{{ column }}:</label>
+        <input type="text" id="{{ column }}" name="{{ column }}"><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
